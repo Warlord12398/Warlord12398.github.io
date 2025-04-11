@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+  animation: float 6s ease-in-out infinite;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff004f;
+  text-shadow: 0 0 15px #ff004f;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ff004f;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header a:hover {
+  background: #e60045;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  color: #ff004f;
+  text-shadow: 0 0 10px #ff004f;
+}
+
+.tool {
+  background: #1f1f1f;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-left: 5px solid #ff004f;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #ff004f80;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tool:hover {
+  transform: translateY(-5px);
+}
+
+.tool h3 {
+  color: #ff004f;
+  margin-bottom: 1rem;
+}
+
+.tool p {
+  color: #ccc;
+}
+
+.tool a {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #ff004f;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.tool a:hover {
+  background: #e60045;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0a0a0a;
+  color: #666;
+  }
