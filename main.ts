@@ -1,42 +1,20 @@
-interface Tool {
-  name: string;
-  description: string;
-  action?: () => void;
+console.log("Main TypeScript file initialized for Warlord12398 site");
+
+function displayToolInfo(name: string, description: string, url: string): void {
+  const container = document.createElement('div');
+  container.className = 'tool';
+
+  container.innerHTML = `
+    <h3>${name}</h3>
+    <p>${description}</p>
+    <a href="${url}" target="_blank">View Tool</a>
+  `;
+
+  document.body.querySelector('section')?.appendChild(container);
 }
 
-const tools: Tool[] = [
-  {
-    name: "Warlord Nuker",
-    description: "A powerful tool that nukes Discord servers with speed and chaos.",
-    action: () => {
-      alert("Warlord Nuker Activated! (demo mode)");
-    }
-  },
-  {
-    name: "Admin Grant",
-    description: "Grants full administrator privileges to a selected user.",
-    action: () => {
-      alert("Admin Granted! (demo mode)");
-    }
-  }
-];
-
-function displayTools() {
-  const container = document.getElementById("tool-list");
-  if (!container) return;
-
-  tools.forEach(tool => {
-    const div = document.createElement("div");
-    div.className = "tool";
-    div.innerHTML = `
-      <h3>${tool.name}</h3>
-      <p>${tool.description}</p>
-      <button>Launch</button>
-    `;
-    const button = div.querySelector("button");
-    button?.addEventListener("click", tool.action);
-    container.appendChild(div);
-  });
-}
-
-displayTools();
+displayToolInfo(
+  'Warlord Nuker',
+  'The ultimate tool to dominate Discord servers: mass-ban, wipe channels, spam webhooks, grant admin, and more.',
+  'https://github.com/Warlord12398/Warlord-Nuker'
+);
