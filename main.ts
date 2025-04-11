@@ -7,9 +7,16 @@ interface Tool {
 const tools: Tool[] = [
   {
     name: "Warlord Nuker",
-    description: "A devastating Discord nuker that wipes everything: channels, roles, and floods webhooks.",
+    description: "A powerful tool that nukes Discord servers with speed and chaos.",
     action: () => {
-      alert("Tool Launched: Warlord Nuker"); // Placeholder action
+      alert("Warlord Nuker Activated! (demo mode)");
+    }
+  },
+  {
+    name: "Admin Grant",
+    description: "Grants full administrator privileges to a selected user.",
+    action: () => {
+      alert("Admin Granted! (demo mode)");
     }
   }
 ];
@@ -24,14 +31,10 @@ function displayTools() {
     div.innerHTML = `
       <h3>${tool.name}</h3>
       <p>${tool.description}</p>
-      <button style="margin-top: 10px; padding: 0.5rem 1rem; background: #ff004f; border: none; border-radius: 0.4rem; color: white; cursor: pointer;">
-        Launch
-      </button>
+      <button>Launch</button>
     `;
-
     const button = div.querySelector("button");
     button?.addEventListener("click", tool.action);
-
     container.appendChild(div);
   });
 }
