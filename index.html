@@ -11,11 +11,17 @@
       margin: 0;
       background-color: #0d0d0d;
       color: #ffffff;
+      overflow-x: hidden;
     }
     header {
       padding: 4rem 2rem;
       text-align: center;
       background: linear-gradient(135deg, #1f1f1f, #111111);
+      animation: floatHeader 6s ease-in-out infinite;
+    }
+    @keyframes floatHeader {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
     header h1 {
       font-size: 3rem;
@@ -53,6 +59,16 @@
       max-width: 600px;
       border-left: 4px solid #ff004f;
       border-radius: 0.5rem;
+      box-shadow: 0 0 15px #ff004f66;
+      transition: transform 0.3s ease;
+      animation: floatTool 5s infinite ease-in-out;
+    }
+    .tool:hover {
+      transform: translateY(-5px);
+    }
+    @keyframes floatTool {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
     .tool h3 {
       color: #ff004f;
@@ -60,7 +76,19 @@
     }
     .tool p {
       color: #ccc;
-      margin: 0;
+      margin: 0 0 1rem 0;
+    }
+    .tool button {
+      padding: 0.5rem 1rem;
+      background: #ff004f;
+      border: none;
+      border-radius: 0.4rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .tool button:hover {
+      background: #e60045;
     }
     footer {
       text-align: center;
@@ -74,9 +102,14 @@
 <body>
   <header>
     <h1>Warlord12398</h1>
-    <p>Hi</p>
+    <p>Master of Discord Tools & Editz Style Interfaces</p>
     <a href="https://github.com/Warlord12398" target="_blank">Visit My GitHub</a>
   </header>
+
+  <audio autoplay loop hidden>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <section id="projects">
     <h2>Featured Tools</h2>
@@ -84,7 +117,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Warlord12398.</p>
+    <p>&copy; 2025 Warlord12398. Built for Discord power users.</p>
   </footer>
 
   <script type="module" src="main.ts"></script>
