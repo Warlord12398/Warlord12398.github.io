@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -78,16 +77,17 @@
       color: #ccc;
       margin: 0 0 1rem 0;
     }
-    .tool button {
+    .tool a {
       padding: 0.5rem 1rem;
       background: #ff004f;
       border: none;
       border-radius: 0.4rem;
       color: white;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
       transition: 0.3s ease;
     }
-    .tool button:hover {
+    .tool a:hover {
       background: #e60045;
     }
     footer {
@@ -104,22 +104,18 @@
     <h1>Warlord12398</h1>
     <p>Master of Discord Tools & Editz Style Interfaces</p>
     <a href="https://github.com/Warlord12398" target="_blank">Visit My GitHub</a>
-  </header>
-
-  <audio autoplay loop hidden>
+  </header>  <audio autoplay loop hidden>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-  </audio>
+  </audio>  <section id="projects">
+    <h2>Featured Tools</h2><div class="tool">
+  <h3>Warlord Nuker</h3>
+  <p>A powerful Discord nuking tool capable of mass deletion, spam, and server annihilation.</p>
+  <a href="https://github.com/Warlord12398/Warlord-Nuker" target="_blank">View on GitHub</a>
+</div>
 
-  <section id="projects">
-    <h2>Featured Tools</h2>
-    <div class="tool" id="tool-list"></div>
-  </section>
-
-  <footer>
+  </section>  <footer>
     <p>&copy; 2025 Warlord12398. Built for Discord power users.</p>
   </footer>
-
-  <script type="module" src="main.ts"></script>
 </body>
-</html>
+  </html>
